@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a480f01-2e32-47cd-9baf-a5df707d3dfa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/chrome-plugin-demo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full-chrome-plugin-demo/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/full-chrome-plugin-demo/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full-chrome-plugin-demo/js/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/full-chrome-plugin-demo/js/background.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full-chrome-plugin-demo/js/content-script.js" beforeDir="false" afterPath="$PROJECT_DIR$/full-chrome-plugin-demo/js/content-script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full-chrome-plugin-demo/js/inject.js" beforeDir="false" afterPath="$PROJECT_DIR$/full-chrome-plugin-demo/js/inject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full-chrome-plugin-demo/js/mypanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/full-chrome-plugin-demo/js/mypanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full-chrome-plugin-demo/js/options.js" beforeDir="false" afterPath="$PROJECT_DIR$/full-chrome-plugin-demo/js/options.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full-chrome-plugin-demo/js/popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/full-chrome-plugin-demo/js/popup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full-chrome-plugin-demo/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/full-chrome-plugin-demo/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full-chrome-plugin-demo/popup.html" beforeDir="false" afterPath="$PROJECT_DIR$/full-chrome-plugin-demo/popup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-action-demo/js/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/page-action-demo/js/background.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-action-demo/popup.html" beforeDir="false" afterPath="$PROJECT_DIR$/page-action-demo/popup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-chrome-plugin-demo/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/simple-chrome-plugin-demo/manifest.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -67,6 +47,33 @@
                 <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/full-chrome-plugin-demo/manifest.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-972">
+              <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page-action-demo/manifest.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/simple-chrome-plugin-demo/manifest.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="60" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -131,6 +138,7 @@
         <option value="$PROJECT_DIR$/full-chrome-plugin-demo/js/inject.js" />
         <option value="$PROJECT_DIR$/full-chrome-plugin-demo/js/content-script.js" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/simple-chrome-plugin-demo/manifest.json" />
       </list>
     </option>
   </component>
@@ -187,6 +195,11 @@
               <item name="chrome-plugin-demo" type="462c0819:PsiDirectoryNode" />
               <item name="page-action-demo" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="chrome-plugin-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chrome-plugin-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="simple-chrome-plugin-demo" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -198,7 +211,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571238789556" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571239022305" />
     <property name="javascript.nodejs.core.library.configured.version" value="8.9.1" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js.eslint.nodeInterpreter" value="project" />
@@ -282,12 +295,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571194921424</updated>
-      <workItem from="1571194923197" duration="17644000" />
+      <workItem from="1571194923197" duration="17855000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17644000" />
+    <option name="totallyTimeSpent" value="17855000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="713" extended-state="0" />
@@ -327,13 +340,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/simple-chrome-plugin-demo/manifest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/page-action-demo/popup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -352,13 +358,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page-action-demo/manifest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -459,13 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/full-chrome-plugin-demo/manifest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -473,6 +465,27 @@
             <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/full-chrome-plugin-demo/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-972">
+          <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page-action-demo/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple-chrome-plugin-demo/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="60" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
         </state>
       </provider>
     </entry>
