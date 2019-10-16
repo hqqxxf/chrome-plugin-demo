@@ -4,10 +4,10 @@ chrome.runtime.onInstalled.addListener(function(){
 			{
 				conditions: [
 					// 只有打开百度才显示pageAction
-					new chrome.declarativeContent.PageStateMatcher({pageUrl: {urlContains: 'baidu.com'}})
+					new chrome.declarativeContent.PageStateMatcher({pageUrl: {urlContains: 'https://translate.google.cn'}})
 				],
 				actions: [new chrome.declarativeContent.ShowPageAction()]
 			}
-		]);
-	});
-});
+		])
+	})
+})

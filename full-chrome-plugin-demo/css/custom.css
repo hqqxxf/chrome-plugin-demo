@@ -19,12 +19,13 @@
 }
 .chrome-plugin-simple-tip {
     position: fixed;
-    left: 20px;
+    right: 20px;
+    z-index: 205;
     padding: 16px 10px;
     top: 30px;
     color: white;
     min-width: 150px;
-	max-width: 700px;
+	  max-width: 700px;
     border-radius: 3px;
     text-align: center;
     font-size: 16px;

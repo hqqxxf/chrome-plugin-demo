@@ -3,6 +3,7 @@ $(function() {
 	// 加载设置
 	var defaultConfig = {color: 'white'}; // 默认配置
 	chrome.storage.sync.get(defaultConfig, function(items) {
+		console.log('popup document: ', document)
 		document.body.style.backgroundColor = items.color;
 	});
 
@@ -16,11 +17,13 @@ $(function() {
 $('#open_background').click(e => {
 	window.open(chrome.extension.getURL('background.html'));
 });
-
+var bg = chrome.extension.getBackgroundPage();
+$('#input').val(bg.count);
 // 调用后台JS
 $('#invoke_background_js').click(e => {
 	var bg = chrome.extension.getBackgroundPage();
-	bg.testBackground();
+  bg.count = bg.count+1;
+  $('#input').val(bg.count);
 });
 
 // 获取后台页标题
@@ -33,15 +36,16 @@ $('#get_background_title').click(e => {
 $('#set_background_title').click(e => {
 	var title = prompt('请输入background的新标题：', '这是新标题');
 	var bg = chrome.extension.getBackgroundPage();
+	console.log('background bg: ', bg)
 	bg.document.title = title;
-	alert('修改成功！');
+	console.log('修改成功！');
 });
 
 // 自定义窗体大小
 $('#custom_window_size').click(() => {
 	chrome.windows.getCurrent({}, (currentWindow) => {
 		var startLeft = 10;
-		chrome.windows.update(currentWindow.id, 
+		chrome.windows.update(currentWindow.id,
 		{
 			left: startLeft * 10,
 			top: 100,
@@ -58,7 +62,7 @@ $('#custom_window_size').click(() => {
 // 最大化窗口
 $('#max_current_window').click(() => {
 	chrome.windows.getCurrent({}, (currentWindow) => {
-		// state: 可选 'minimized', 'maximized' and 'fullscreen' 
+		// state: 可选 'minimized', 'maximized' and 'fullscreen'
 		chrome.windows.update(currentWindow.id, {state: 'maximized'});
 	});
 });
@@ -67,7 +71,7 @@ $('#max_current_window').click(() => {
 // 最小化窗口
 $('#min_current_window').click(() => {
 	chrome.windows.getCurrent({}, (currentWindow) => {
-		// state: 可选 'minimized', 'maximized' and 'fullscreen' 
+		// state: 可选 'minimized', 'maximized' and 'fullscreen'
 		chrome.windows.update(currentWindow.id, {state: 'minimized'});
 	});
 });
@@ -103,7 +107,7 @@ $('#get_current_tab_id').click(() => {
 	});
 });
 
-// 高亮tab
+// 切换到第一个tab
 $('#highlight_tab').click(() => {
 	chrome.tabs.highlight({tabs: 0});
 });
@@ -113,14 +117,6 @@ $('#send_message_to_content_script').click(() => {
 	sendMessageToContentScript('你好，我是popup！', (response) => {
 		if(response) alert('收到来自content-script的回复：'+response);
 	});
-});
-
-// 监听来自content-script的消息
-chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
-{
-	console.log('收到来自content-script的消息：');
-	console.log(request, sender, sendResponse);
-	sendResponse('我是popup，我已收到你的消息：' + JSON.stringify(request));
 });
 
 // popup与content-script建立长连接
@@ -138,24 +134,20 @@ $('#connect_to_content_script').click(() => {
 	});
 });
 
+// 监听来自content-script的消息
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
+{
+  console.log('收到来自content-script的消息：');
+  console.log(request, sender, sendResponse);
+  sendResponse('我是popup，我已收到你的消息：' + JSON.stringify(request));
+});
+
 // 获取当前选项卡ID
 function getCurrentTabId(callback)
 {
 	chrome.tabs.query({active: true, currentWindow: true}, function(tabs)
 	{
 		if(callback) callback(tabs.length ? tabs[0].id: null);
-	});
-}
-
-// 这2个获取当前选项卡id的方法大部分时候效果都一致，只有少部分时候会不一样
-function getCurrentTabId2()
-{
-	chrome.windows.getCurrent(function(currentWindow)
-	{
-		chrome.tabs.query({active: true, windowId: currentWindow.id}, function(tabs)
-		{
-			if(callback) callback(tabs.length ? tabs[0].id: null);
-		});
 	});
 }
 

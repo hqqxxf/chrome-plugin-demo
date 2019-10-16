@@ -1,4 +1,5 @@
 //-------------------- 右键菜单演示 ------------------------//
+var count = 1;
 chrome.contextMenus.create({
 	title: "测试右键菜单",
 	onclick: function(){
@@ -56,22 +57,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
 	sendResponse('我是后台，我已收到你的消息：' + JSON.stringify(request));
 });
 
-$('#test_cors').click((e) => {
-	$.get('https://www.baidu.com', function(html){
-		console.log( html);
-		alert('跨域调用成功！');
-	});
-});
-
-$('#get_popup_title').click(e => {
-	var views = chrome.extension.getViews({type:'popup'});
-	if(views.length > 0) {
-		alert(views[0].document.title);
-	} else {
-		alert('popup未打开！');
-	}
-});
-
 // 获取当前选项卡ID
 function getCurrentTabId(callback)
 {
@@ -82,16 +67,14 @@ function getCurrentTabId(callback)
 }
 
 // 当前标签打开某个链接
-function openUrlCurrentTab(url)
-{
+function openUrlCurrentTab(url) {
 	getCurrentTabId(tabId => {
 		chrome.tabs.update(tabId, {url: url});
 	})
 }
 
 // 新标签打开某个链接
-function openUrlNewTab(url)
-{
+function openUrlNewTab(url) {
 	chrome.tabs.create({url: url});
 }
 
@@ -146,6 +129,7 @@ chrome.storage.sync.get({showImage: true}, function(items) {
 });
 // web请求监听，最后一个参数表示阻塞式，需单独声明权限：webRequestBlocking
 chrome.webRequest.onBeforeRequest.addListener(details => {
+	console.log('details: ', details)
 	// cancel 表示取消本次请求
 	if(!showImage && details.type == 'image') return {cancel: true};
 	// 简单的音视频检测
@@ -159,3 +143,20 @@ chrome.webRequest.onBeforeRequest.addListener(details => {
 		});
 	}
 }, {urls: ["<all_urls>"]}, ["blocking"]);
+
+
+$('#test_cors').click((e) => {
+  $.get('https://www.baidu.com', function(html){
+    console.log( html);
+    alert('跨域调用成功！');
+  });
+});
+
+$('#get_popup_title').click(e => {
+  var views = chrome.extension.getViews({type:'popup'});
+  if(views.length > 0) {
+    alert(views[0].document.title);
+  } else {
+    alert('popup未打开！');
+  }
+});
